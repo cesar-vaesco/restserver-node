@@ -1,9 +1,15 @@
 const { response } = require('express');
 
 
-const usuariosGet = (req, res = response) => {
+// http://localhost:8080/api/usuarios/?q=hola&nombre=César&apikey=12345479
+const usuariosGet = (req = request, res = response) => {
+
+    const { q, nombre, apikey } = req.query;
     res.json({
-        "msg": "get api - controllador"
+        "msg": "get api - controllador",
+        q,
+        nombre,
+        apikey
     });
 }
 
@@ -20,8 +26,12 @@ const usuariosPost = (req, res = response) => {
 }
 
 const usuariosPut = (req, res = response) => {
-    res.status(400).json({
-        "msg": "put api - controllador"
+
+    const id = req.params.id;
+
+    res.json({
+        "msg": "put api - controllador",
+        id
     });
 }
 

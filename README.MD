@@ -5,4 +5,5 @@
 - 4.- Instalación de CORS - facilitar o restringir la acomunicación entre apis
 - 5.- Configurando el router
 - 6.- Creando las funciones controlador
-- 7.- obtenindo datos del POST usando el req.body
+- 7.- Obtenindo datos del POST usando el req.body
+- 8.- Obteniendo la info que llega como parametro o como query

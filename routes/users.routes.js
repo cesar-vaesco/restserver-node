@@ -15,7 +15,7 @@ router.get('/', usuariosGet);
 
 router.post('/', usuariosPost);
 
-router.put('/', usuariosPut);
+router.put('/:id', usuariosPut);
 
 router.patch('/', usuariosPatch);
 
@@ -24,3 +24,9 @@ router.delete('/', usuariosDelete);
 
 
 module.exports = router;
+
+
+/**
+  *El id se le asigna a la ruta que requiere modificar algo usando el id como identificador
+  *ejemplo listar por id, borrar, crear
+  */
