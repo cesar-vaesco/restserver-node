@@ -6,6 +6,7 @@ class Server {
     constructor () {
         this.app = express();
         this.port = process.env.PORT;
+        this.usuariosPath = '/api/usuarios';
 
         //Middleware
         this.middlewares();
@@ -25,35 +26,8 @@ class Server {
     }
 
     routes() {
-        this.app.get('/api', (req, res) => {
-            res.json({
-                "msg": "get api"
-            })
-        });
-
-        this.app.put('/api', (req, res) => {
-            res.status(400).json({
-                "msg": "put api"
-            })
-        });
-
-        this.app.post('/api', (req, res) => {
-            res.status(201).json({
-                "msg": "post api"
-            })
-        });
-
-        this.app.delete('/api', (req, res) => {
-            res.json({
-                "msg": "delete api"
-            })
-        });
-
-        this.app.patch('/api', (req, res) => {
-            res.json({
-                "msg": "patch api"
-            })
-        });
+        //Middleware que configura endpoint de nustra api -> http://localhost:8080/api/usuarios/?
+        this.app.use(this.usuariosPath, require('../routes/users.routes'));
     }
 
     listen() {
