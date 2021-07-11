@@ -18,22 +18,25 @@ class Server {
 
     middlewares() {
 
-        //Cors
+        //CORS
         this.app.use(cors());
+
+        //Parseo y lectura del body
+        this.app.use(express.json());
 
         //Directorio público
         this.app.use(express.static('public'));
     }
 
+
     routes() {
+
         //Middleware que configura endpoint de nustra api -> http://localhost:8080/api/usuarios/?
         this.app.use(this.usuariosPath, require('../routes/users.routes'));
     }
 
+
     listen() {
-
-
-
 
         this.app.listen(this.port, () => {
             console.log(`\nServidor corriendo en el puerto ${this.port} -  http://localhost:${this.port}`)
