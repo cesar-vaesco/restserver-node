@@ -11,3 +11,6 @@ Ejecutr el comando ```npm install``` para reconstruir los modulos de node
 - 6.- Creando las funciones controlador
 - 7.- Obtenindo datos del POST usando el req.body
 - 8.- Obteniendo la info que llega como parametro o como query
+- 9.- Creando cluster y usuario en mongoDB
+- 10.- Configuración entre mongoDB cloud y mongo compass
+- 11.- Configurando conexión a la base de datos
