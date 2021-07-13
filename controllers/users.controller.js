@@ -1,5 +1,7 @@
 const { response } = require('express');
 
+const Usuario = require('../models/usuario');
+
 
 // http://localhost:8080/api/usuarios/?q=hola&nombre=César&apikey=12345479
 const usuariosGet = (req = request, res = response) => {
@@ -13,14 +15,17 @@ const usuariosGet = (req = request, res = response) => {
     });
 }
 
-const usuariosPost = (req, res = response) => {
+const usuariosPost = async (req, res = response) => {
 
-    const { nombre, edad } = req.body;
+    const body = req.body;
+    const usuario = new Usuario(body);
+
+    //Grabar el registro de
+    await usuario.save();
 
     res.status(201).json({
         "msg": "post api - controller",
-        nombre,
-        edad
+        usuario
 
     });
 }
