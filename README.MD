@@ -1,7 +1,7 @@
 
 # Web Server + RestServer
 
-Ejecutr el comando ```npm install``` para reconstruir los modulos de node
+Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 
 - 1.- Inicializando servidor con express y configurando el puerto como una variable(dotenv)
 - 2.- Configurando el servidor como una clase
@@ -14,3 +14,4 @@ Ejecutr el comando ```npm install``` para reconstruir los modulos de node
 - 9.- Creando cluster y usuario en mongoDB
 - 10.- Configuración entre mongoDB cloud y mongo compass
 - 11.- Configurando conexión a la base de datos
+- 12.- Definiendo el Schema/modelo que se usara en la api
