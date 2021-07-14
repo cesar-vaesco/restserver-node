@@ -34,5 +34,10 @@ const UsuariosSchema = Schema({
 
 });
 
+UsuariosSchema.methods.toJSON = function () {
+    const { __v, password, ...usuario } = this.toObject();
+    return usuario;
+}
+
 // Se exporta el modelo de nombre UsuariosSchema y se define el nombre de la colección la cual se llamara Usuario
 module.exports = model('Usuario', UsuariosSchema);

@@ -23,3 +23,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 18.- (express-validator) usando middleware para validar campos
 - 19.- (express-validator - mongoose) Validando rol contra la base de datos
 - 20.- Uso de carpeta helpers para centralizar la validación del rol
+- 21.- Metodo toJSON usado en el módelo del objeto usuario para mostrar en la creación del objeto los campos que sólo se quieran mostrar
