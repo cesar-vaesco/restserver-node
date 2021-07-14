@@ -17,3 +17,5 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 12.- Definiendo el Schema/modelo que se usara en la api
 - 13.- Hacer persistente la información en la base de datos - método post
 - 14.- Encriptando la contraseña con el paquete bcryptjs
+- 15.- (express-validator) Validando registro previo de correo
+- 15.- (express-validator) Validando registro de correo sea en formato correcto
