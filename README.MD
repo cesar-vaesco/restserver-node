@@ -16,3 +16,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 11.- Configurando conexión a la base de datos
 - 12.- Definiendo el Schema/modelo que se usara en la api
 - 13.- Hacer persistente la información en la base de datos - método post
+- 14.- Encriptando la contraseña con el paquete bcryptjs
