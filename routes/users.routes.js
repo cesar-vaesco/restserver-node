@@ -8,6 +8,8 @@ const { usuariosGet,
     usuariosDelete,
     usuariosPatch } = require('../controllers/users.controller');
 
+const { validarCampos } = require('../middlewares/validar-campos');
+
 const router = Router();
 
 
@@ -19,6 +21,7 @@ router.post('/', [
     check('password', 'El password es obligatorio y debe de contener más de 6 letras').isLength({ min: 6 }),
     check('correo', 'El correo ingresado no es valido').isEmail(),
     check('rol', 'No es un rol permitido').isIn(['ADMIN_ROLE', 'USER_ROLE']),
+    validarCampos
 ], usuariosPost);
 
 router.put('/:id', usuariosPut);
