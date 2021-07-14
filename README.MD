@@ -21,3 +21,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 16.- (express-validator) Validando registro de correo sea en formato correcto
 - 17.- (express-validator) Validando correo, nombre y rol
 - 18.- (express-validator) usando middleware para validar campos
+- 19.- (express-validator - mongoose) Validando rol contra la base de datos
