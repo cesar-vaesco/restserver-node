@@ -13,7 +13,6 @@ const esRoleValido = async (rol = '') => {
 
 const emailExiste = async (correo = '') => {
 
-
     //Verificar si el correo existencia
     const existeEmail = await Usuario.findOne({ correo });
     if (existeEmail) {

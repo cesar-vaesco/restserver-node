@@ -20,10 +20,8 @@ const usuariosGet = (req = request, res = response) => {
 
 const usuariosPost = async (req, res = response) => {
 
-
     const { nombre, correo, password, rol } = req.body;
     const usuario = new Usuario({ nombre, correo, password, rol });
-
 
     //Encriptar - Hash de la contraseña
     const salt = bcryptjs.genSaltSync();
@@ -38,13 +36,23 @@ const usuariosPost = async (req, res = response) => {
     });
 }
 
-const usuariosPut = (req, res = response) => {
+const usuariosPut = async (req, res = response) => {
 
-    const id = req.params.id;
+    const { id } = req.params;
+    const { password, google, correo, ...resto } = req.body;
+
+    //TODO: Validar contra base de datos
+    if (password) {
+
+        const salt = bcryptjs.genSaltSync();
+        resto.password = bcryptjs.hashSync(password, salt);
+    }
+
+    const usuario = await Usuario.findByIdAndUpdate(id, resto);
 
     res.json({
         "msg": "put api - controllador",
-        id
+        usuario
     });
 }
 
