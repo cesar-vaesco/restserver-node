@@ -26,3 +26,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 21.- Metodo toJSON usado en el módelo del objeto usuario para mostrar en la creación del objeto los campos que sólo se quieran mostrar
 - 22.- Validando existencia de correo
 - 23.- Implementación de handler put - actualizarUsuarios
+- 24.- Validaciones adicionales en put
