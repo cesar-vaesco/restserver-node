@@ -29,3 +29,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 24.- Validaciones adicionales en put
 - 25.- (GET) Leyendo y mostrando todos los datos guardados
 - 26.- (GET) Paginando y liminado el número de registros a mostrar
+- 27.- (GET) Retornar número total de registros en una collección - uso de promise - async/await
