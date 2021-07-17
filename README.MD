@@ -27,3 +27,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 22.- Validando existencia de correo
 - 23.- Implementación de handler put - actualizarUsuarios
 - 24.- Validaciones adicionales en put
+- 25.- (GET) Leyendo y mostrando todos los datos guardados

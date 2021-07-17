@@ -7,15 +7,11 @@ const Usuario = require('../models/usuario');
 
 
 // http://localhost:8080/api/usuarios/?q=hola&nombre=César&apikey=12345479
-const usuariosGet = (req = request, res = response) => {
+const usuariosGet = async (req = request, res = response) => {
+    // const { q, nombre, apikey } = req.query;
 
-    const { q, nombre, apikey } = req.query;
-    res.json({
-        "msg": "get api - controllador",
-        q,
-        nombre,
-        apikey
-    });
+    const usuarios = await Usuario.find();
+    res.json({ usuarios });
 }
 
 const usuariosPost = async (req, res = response) => {
@@ -50,10 +46,7 @@ const usuariosPut = async (req, res = response) => {
 
     const usuario = await Usuario.findByIdAndUpdate(id, resto);
 
-    res.json({
-        "msg": "put api - controllador",
-        usuario
-    });
+    res.json(usuario);
 }
 
 const usuariosPatch = (req, res = response) => {
