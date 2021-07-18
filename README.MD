@@ -33,9 +33,12 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 28.- (DELETE) Integridad referencial. En este ejemplo, la referencia del documento en la base de datos se conserva, pero no se borra de la bd, solo se cambia de estado, así no se elimina completamente un registro pero se muestra como eliminado de los registros para los usuarios.
 - 29.- Actualizando repo productivo en heroku
 - 30.- Cambiando las variables e entorno del proyecto en local a el repo de heroku
+    - *** En este commit se cambió la variable de entorno MONGODB_CNN configurandola de manera productiva a heroku ***
+    -
     - Crear variables de entorno:
         - Conocer las variables de entorno configuradas ```heroku config```
         - Agregar una variable de entorno ```heroku config:set NOMBRE_DE_VARIABLE="valor_de_variable"```
             - ejemplo: ```heroku config:set NOMBRE="César"```
         - Borrar una variable de entorno ```heroku config:unset nombre_variable_borrar```
-- *** En este commit se cambió la variable de entorno MONGODB_CNN configurandola de manera productiva a heroku ***
+    - Ejemplo de configurar cadena de conexión a heroku:
+        -  heroku config:set MONGODB_CNN="mongodb+srv://<nombre_usuario>:<contraseña>@<nombreclusther><nombre_colección>"
