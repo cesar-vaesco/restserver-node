@@ -30,5 +30,5 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 25.- (GET) Leyendo y mostrando todos los datos guardados
 - 26.- (GET) Paginando y liminado el número de registros a mostrar
 - 27.- (GET) Retornar número total de registros en una collección - uso de promise - async/await
-- 28.- (DELETE) Integridad referencial. En este ejemplo, la referencia del documento en la base de datos se conserva, pero no se borra de la bd, solo e cambia de estado, así no se elimina completamente un registro pero se muestra como eliminado de los registros para los usuarios.
--
+- 28.- (DELETE) Integridad referencial. En este ejemplo, la referencia del documento en la base de datos se conserva, pero no se borra de la bd, solo se cambia de estado, así no se elimina completamente un registro pero se muestra como eliminado de los registros para los usuarios.
+- 29.- Actualizando repo productivo en heroku
