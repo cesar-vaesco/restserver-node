@@ -56,3 +56,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 37.- Configurando que al cambiar el estado de un registro a false se invalide el token generado y de esta manera evitar el login del egistro eliminado
 - 38.- Validando que el usuario exista en la base de datos, en caso de no existir no permitir que el token sea valido
 - 39.- Se crea un middleware que permite validar si el rol del usuario es ADMIN_ROLE -> para la prueba esto va  permitir que si se tiene el rol anteriormente mencionado este usuario ADMIN va a poder borrar(cambiar estado) de la base de datos
+- 40 .- Se crea un middleware que permite validar los roles y con ello permitir accions en los diferents handlers, para el ejercicio es en el handler deleteUsuario
