@@ -1,6 +1,8 @@
 
 # Web Server + RestServer
 
+#### App productiva - url: https://app-rest-node-app.herokuapp.com/
+
 Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 
 - 1.- Inicializando servidor con express y configurando el puerto como una variable(dotenv)
@@ -42,3 +44,7 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
         - Borrar una variable de entorno ```heroku config:unset nombre_variable_borrar```
     - Ejemplo de configurar cadena de conexión a heroku:
         -  heroku config:set MONGODB_CNN="mongodb+srv://<nombre_usuario>:<contraseña>@<nombreclusther><nombre_colección>"
+
+### JWT - AUTHENTICACIÓN - TOKEN DE ACCESO
+
+- 31.- Creación de la ruta que permite authenticar el login (controller - ruta - handler)
