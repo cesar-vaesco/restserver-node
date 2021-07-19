@@ -50,3 +50,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 31.- Creación de la ruta que permite authenticar el login (controller - ruta - handler)
 - 32.- Configurando la validación correo existente, usuario activo(borrado) y contraseña valida para generar el login
 - 33.- (JWT) Utilizado la libreria jsonwebtoken para generar el token de autenticación y configurando el métedo que permite la autenticación en los helpers
+- 34.- Se cambia visualmente _id por uid en la clase modelo del usuario que le indica a moongo como crear el documento
