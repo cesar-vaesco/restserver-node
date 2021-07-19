@@ -48,3 +48,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 ### JWT - AUTHENTICACIÓN - TOKEN DE ACCESO
 
 - 31.- Creación de la ruta que permite authenticar el login (controller - ruta - handler)
+- 32.- Configurando la validación correo existente, usuario activo(borrado) y contraseña valida para generar el login
