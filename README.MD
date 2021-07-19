@@ -53,3 +53,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 34.- Se cambia visualmente _id por uid en la clase modelo del usuario que le indica a moongo como crear el documento
 - 35- Uso de middleware para generar la validación del JWT, el cual va a permitir generar acciones sobre nuestras rutas/vistas
 - 36.- Obteniendo información del usuario autenticado
+- 37.- Configurando que al cambiar el estado de un registro a false se invalide el token generado y de esta manera evitar el login del egistro eliminado
