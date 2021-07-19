@@ -52,3 +52,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 33.- (JWT) Utilizado la libreria jsonwebtoken para generar el token de autenticación y configurando el métedo que permite la autenticación en los helpers
 - 34.- Se cambia visualmente _id por uid en la clase modelo del usuario que le indica a moongo como crear el documento
 - 35- Uso de middleware para generar la validación del JWT, el cual va a permitir generar acciones sobre nuestras rutas/vistas
+- 36.- Obteniendo información del usuario autenticado
