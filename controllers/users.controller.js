@@ -79,12 +79,14 @@ const usuariosDelete = async (req, res = response) => {
 
     const { id } = req.params;
 
+    const uid = req.uid;
+
     // Fisicamente se borra el registro
     // const usuario = await Usuario.findByIdAndDelete(id);
 
     const usuario = await Usuario.findByIdAndUpdate(id, { estado: false });
 
-    res.json(usuario);
+    res.json({ usuario, uid });
 }
 
 
