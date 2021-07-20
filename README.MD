@@ -34,7 +34,12 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 27.- (GET) Retornar número total de registros en una collección - uso de promise - async/await
 - 28.- (DELETE) Integridad referencial. En este ejemplo, la referencia del documento en la base de datos se conserva, pero no se borra de la bd, solo se cambia de estado, así no se elimina completamente un registro pero se muestra como eliminado de los registros para los usuarios.
 - 29.- Actualizando repo productivo en heroku
-- 30.- Cambiando las variables e entorno del proyecto en local a el repo de heroku
+<hr/>
+
+<div id="cambiando_variables_heroku"></div>
+*** Modificando las variables de entorno configuradas en HEROKU ***
+
+- 30 .- Cambiando las variables e entorno del proyecto en local a el repo de heroku
     - *** En este commit se cambió la variable de entorno MONGODB_CNN configurandola de manera productiva a heroku ***
     -
     - Crear variables de entorno:
@@ -59,3 +64,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 40 .- Se crea un middleware que permite validar los roles y con ello permitir accions en los diferents handlers, para el ejercicio es en el handler deleteUsuario
 - 41.- Optimizando las importaciones e los middlewares -> checar que en las importaciones de los middlewares los
 - nombres no chocan
+- 42.- Estableciendo ```SECRETORPRIVATEKEY``` como variable de entorno en HEROKU ---> * [verpaso30](#cambiando_variables_heroku) para identificar los pasos a seguir
