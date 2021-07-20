@@ -65,3 +65,10 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 41.- Optimizando las importaciones e los middlewares -> checar que en las importaciones de los middlewares los
 - nombres no chocan
 - 42.- Estableciendo ```SECRETORPRIVATEKEY``` como variable de entorno en HEROKU ---> * [verpaso30](#cambiando_variables_heroku) para identificar los pasos a seguir
+    - *** Ver logs de app productiva en heroku ```heroku logs -n 100 ``` ***
+    - *** Ver logs de app productiva en heroku en tiempo real```heroku logs -n 100 --tail``` ***
+
+
+###  Iniciar sesión en sitios web - Google Sing-In for Websites
+
+- 43.- Generando ```API Key y API Secret de Google``` = GOOGLE_CLIENT_ID y GOOGLE_SECRET_ID de [GOOGLe sign-in for Websites](https://developers.google.com/identity/sign-in/web/backend-auth) - Para ello se debe de tener cuenta de google
