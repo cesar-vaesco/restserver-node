@@ -75,3 +75,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 44.- [Integrando el servicio ](https://developers.google.com/identity/sign-in/web/sign-in) - este URL mustra los pasos a seguir para utilizar la funcionalidad que google ofrece la cual va a permitir loguear con nuestra cuenta de google o salir de sesión
 - 45.- [Pasos para autenticarse con un servidor backend](https://developers.google.com/identity/sign-in/web/backend-auth) - probando la ruta /api/auth/google para configurar la autenticación
 - 46.- Mandando a llamar nuestro servicio de autenticación desde nuestro frontend usando fetch-api
+- 47.- Validando Token de google en el backend

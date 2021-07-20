@@ -4,6 +4,7 @@ const { response } = require('express');
 const generarJWT = require('../helpers/generar-jwt');
 const Usuario = require('../models/usuario')
 
+const { googleVerify } = require('../helpers/google-verify');
 
 const login = async (req, res = response) => {
 
@@ -49,22 +50,37 @@ const login = async (req, res = response) => {
     } catch (error) {
         console.log(error);
         return res.status(500).json({
-            msg: 'Hable cn el administrador'
+            msg: 'Hable con el administrador'
         })
     }
 
 }
 
-const googleSignin = (req, res = response) => {
+const googleSignin = async (req, res = response) => {
 
     //Obteniendo el token de google signin
     const { id_token } = req.body;
 
+    try {
+        const googleUser = await googleVerify(id_token);
 
-    res.json({
-        msg: 'Todo Ok! google signin',
-        id_token
-    })
+        console.log(googleUser);
+
+        res.json({
+            msg: 'Todo Ok! google signin',
+            googleUser
+            /* id_token */
+        });
+
+    } catch (error) {
+
+        res.status(400).json({
+            msg: 'Token de google no es valido'
+        })
+
+    }
+
+
 }
 
 
