@@ -8,10 +8,16 @@ const { usuariosGet,
     usuariosDelete,
     usuariosPatch } = require('../controllers/users.controller');
 
-const { validarCampos } = require('../middlewares/validar-campos');
+/* const { validarCampos } = require('../middlewares/validar-campos');
 const { validarJWT } = require('../middlewares/validar-jwt');
 const { esAdminRole, tieneRol
- } = require('../middlewares/validar-roles');
+ } = require('../middlewares/validar-roles'); */
+
+const {
+    validarCampos,
+    validarJWT,
+    esAdminRole,
+    tieneRol } = require('../middlewares')
 
 
 const { esRoleValido, emailExiste, existeUsuarioPorId } = require('../helpers/db-validators');

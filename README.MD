@@ -57,3 +57,5 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 38.- Validando que el usuario exista en la base de datos, en caso de no existir no permitir que el token sea valido
 - 39.- Se crea un middleware que permite validar si el rol del usuario es ADMIN_ROLE -> para la prueba esto va  permitir que si se tiene el rol anteriormente mencionado este usuario ADMIN va a poder borrar(cambiar estado) de la base de datos
 - 40 .- Se crea un middleware que permite validar los roles y con ello permitir accions en los diferents handlers, para el ejercicio es en el handler deleteUsuario
+- 41.- Optimizando las importaciones e los middlewares -> checar que en las importaciones de los middlewares los
+- nombres no chocan
