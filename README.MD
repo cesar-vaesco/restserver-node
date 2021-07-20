@@ -72,3 +72,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 ###  Iniciar sesión en sitios web - Google Sing-In for Websites
 
 - 43.- Generando ```API Key y API Secret de Google``` = GOOGLE_CLIENT_ID y GOOGLE_SECRET_ID de [GOOGLe sign-in for Websites](https://developers.google.com/identity/sign-in/web/backend-auth) - Para ello se debe de tener cuenta de google
+- 44.- [Integrando el servicio](https://developers.google.com/identity/sign-in/web/sign-in) - este URL mustra los pasos a seguir para utilizar la funcionalidad que google ofrece la cual va a permitir loguear con nuesra cuenta de google o salir de sesión
