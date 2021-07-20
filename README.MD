@@ -77,3 +77,4 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 46.- Mandando a llamar nuestro servicio de autenticación desde nuestro frontend usando fetch-api
 - 47.- Validando Token de google en el backend
 - 48.- Crear usuario personalizado con las credenciales de google
+- 49.-
