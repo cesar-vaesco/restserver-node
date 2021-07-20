@@ -62,14 +62,38 @@ const googleSignin = async (req, res = response) => {
     const { id_token } = req.body;
 
     try {
-        const googleUser = await googleVerify(id_token);
+        const { correo, nombre, img } = await googleVerify(id_token);
 
-        console.log(googleUser);
+        //Verificar si el correo xiste en la bd
+        let usuario = await Usuario.findOne({ correo });
+
+        if (!usuario) {
+            //Crear usuario
+            const data = {
+                nombre,
+                correo,
+                password: ':P',
+                img,
+                google: true
+            };
+
+            usuario = new Usuario(data);
+            await usuario.save();
+        }
+
+        // Validar el estado del usuario
+        if (!usuario.estado) {
+            return res.status(401).json({
+                msg: 'Hable con administrador - usuario bloqueado'
+            })
+        }
+
+        //Generar JWT
+        const token = await generarJWT(usuario.id);
+        /* console.log(googleUser); */
 
         res.json({
-            msg: 'Todo Ok! google signin',
-            googleUser
-            /* id_token */
+            usuario, //token
         });
 
     } catch (error) {
@@ -79,7 +103,6 @@ const googleSignin = async (req, res = response) => {
         })
 
     }
-
 
 }
 
