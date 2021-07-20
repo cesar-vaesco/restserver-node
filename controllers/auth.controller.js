@@ -57,10 +57,13 @@ const login = async (req, res = response) => {
 
 const googleSignin = (req, res = response) => {
 
+    //Obteniendo el token de google signin
+    const { id_token } = req.body;
 
 
     res.json({
-        msg:'Todo Ok! google signin'
+        msg: 'Todo Ok! google signin',
+        id_token
     })
 }
 
