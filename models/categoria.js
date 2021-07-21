@@ -7,7 +7,8 @@ const CategoriaSchema = Schema({
 
     nombre: {
         type: String,
-        required: [true, `El 'NOMBRE' es obligatorio`]
+        required: [true, `El 'NOMBRE' es obligatorio`],
+        unique: true
     },
     estado: {
         type: Boolean,
@@ -23,4 +24,4 @@ const CategoriaSchema = Schema({
 });
 
 
-module.exports = model('Role', CategoriaSchema);
+module.exports = model('Categoria', CategoriaSchema);

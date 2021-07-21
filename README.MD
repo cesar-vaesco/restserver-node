@@ -93,3 +93,13 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
     - Creando el modelo de categoria
         - Se le da nombre, estado y se le RELACIONA con un objeto para su creación, que en este caso sera Usuario; si no existe un usuario creado o el usuario no cuenta con estado true en la base de datos, no se crea una categoría
     - Se crea un index.js en la carpeta models, el cual sirve para centralizar las importaciones de nuestros modelos
+- 51.- Crear una categoria
+    - Se crean una categoria con validaciones en el router
+    - Se crea el método controlador el cual va a permitir antes de guardar la nueva categoria creada:
+        - A través de res guardar el nombre asignado en mayusculas
+        - Buscar usando un método de mongoose( Categoria.findOne({ nombre }) ) la existencia de la categoria
+        - Verificar si la categoria creada ya existe, en caso de existir regresa una respuesta
+        - Identificar la data a guardar y almacernarla como un objeto
+        - Guadar la categoria en un nuevo objeto recibiendo como parametro la data
+        - Guardar la categoria creada usando el método e mongoose save()
+        - Regresar la respuesta em formato json junto con uel status http 201 de creado
