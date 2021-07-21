@@ -89,3 +89,7 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 50 .- CRUD y rutas de Categorías
     - Creando las rutas
     - Editando el servidor
+- 51 .- Modelo categoria
+    - Creando el modelo de categoria
+        - Se le da nombre, estado y se le RELACIONA con un objeto para su creación, que en este caso sera Usuario; si no existe un usuario creado o el usuario no cuenta con estado true en la base de datos, no se crea una categoría
+    - Se crea un index.js en la carpeta models, el cual sirve para centralizar las importaciones de nuestros modelos
