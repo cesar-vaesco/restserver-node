@@ -77,4 +77,15 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 46.- Mandando a llamar nuestro servicio de autenticación desde nuestro frontend usando fetch-api
 - 47.- Validando Token de google en el backend
 - 48.- Crear usuario personalizado con las credenciales de google
-- 49.-
+- 49.- Estableciendo ```GOOGLE_CLIENT_ID``` como variable de entorno en HEROKU ---> * [verpaso30](#cambiando_variables_heroku) para identificar los pasos a seguir
+
+<hr/>
+
+#### [Documentación generado con postman sobre nuestra api hasta el momento](https://documenter.getpostman.com/view/7410558/TzsWtq68)
+<hr/>
+
+
+### Sesión de app Categorias y productos
+- 50 .- CRUD y rutas de Categorías
+    - Creando las rutas
+    - Editando el servidor
