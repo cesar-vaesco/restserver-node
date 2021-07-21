@@ -103,3 +103,7 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
         - Guadar la categoria en un nuevo objeto recibiendo como parametro la data
         - Guardar la categoria creada usando el método e mongoose save()
         - Regresar la respuesta em formato json junto con uel status http 201 de creado
+        - ![Texto alternativo](public/img/post-token.png)
+- 52.- Se crea al método obtenerCategorias  - paginando los resultados - si,ilar al método getUsuarios
+    - Se usa el metodo populate de mongoose para mostrar los datos del usuario que crea la categoria
+    - Se modifica el método CategoriaSchema.methods.toJSON para evitar enviar datos a la vista
