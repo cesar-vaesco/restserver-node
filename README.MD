@@ -107,3 +107,7 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 52.- Se crea al método obtenerCategorias  - paginando los resultados - si,ilar al método getUsuarios
     - Se usa el metodo populate de mongoose para mostrar los datos del usuario que crea la categoria
     - Se modifica el método CategoriaSchema.methods.toJSON para evitar enviar datos a la vista
+- 53.- Obtener categoria por id
+    - Se crea el controlador
+    - Se valida que el id de la categoria exista (db-validators)
+    - Se creal altuta y se añaden los check validando un id de mongo valido y que exista la categoria validando su id

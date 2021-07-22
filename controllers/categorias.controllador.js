@@ -22,8 +22,17 @@ const obtenerCategorias = async (req = request, res = response) => {
     })
 }
 
-
 //Obtener categoria - - populate { regresa el objeto de categoria}
+const obtenerCategoria = async (req = request, res = response) => {
+
+    const { id } = req.params;
+    /* console.log(id); */
+
+    const categoria = await Categoria.findById(id).populate('usuario', 'nombre');
+
+    res.json(categoria);
+
+}
 
 const crearCategoria = async (req, res = response) => {
 
@@ -62,4 +71,5 @@ module.exports = {
 
     crearCategoria,
     obtenerCategorias,
+    obtenerCategoria
 }
