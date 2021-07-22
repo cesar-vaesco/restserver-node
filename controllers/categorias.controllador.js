@@ -60,7 +60,37 @@ const crearCategoria = async (req, res = response) => {
     res.status(201).json(categoria);
 };
 
-//Actualizar categoria para
+//Actualizar categoria
+const actualizarCategoria = async (req, res = response) => {
+
+    const { id } = req.params;
+    const { estado, usuario, ...data } = req.body;
+
+    data.nombre = data.nombre.toUpperCase();
+    data.usuario = req.usuario._id;
+
+    const categoria = await Categoria.findByIdAndUpdate(id, data, { new: true });
+
+    res.json(categoria);
+}
+
+
+/* const usuariosPut = async (req, res = response) => {
+
+    const { id } = req.params;
+    const { _id, password, google, correo, ...resto } = req.body;
+
+    //TODO: Validar contra base de datos
+    if (password) {
+
+        const salt = bcryptjs.genSaltSync();
+        resto.password = bcryptjs.hashSync(password, salt);
+    }
+
+    const usuario = await Usuario.findByIdAndUpdate(id, resto);
+
+    res.json(usuario);
+} */
 
 //Borrar(cambiar estado de la categoria) categoria
 
@@ -71,5 +101,6 @@ module.exports = {
 
     crearCategoria,
     obtenerCategorias,
-    obtenerCategoria
+    obtenerCategoria,
+    actualizarCategoria
 }

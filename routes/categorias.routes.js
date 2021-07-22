@@ -1,14 +1,17 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
+
+const { validarJWT, validarCampos } = require('../middlewares');
+
 const {
     crearCategoria,
     obtenerCategorias,
-    obtenerCategoria } = require('../controllers/categorias.controllador');
+    obtenerCategoria,
+    actualizarCategoria} = require('../controllers/categorias.controllador');
 
 const { existeCategoriaPorId } = require('../helpers/db-validators');
 
 
-const { validarJWT, validarCampos } = require('../middlewares');
 /* const { existeCategoria } = require('../middlewares/validar-categoria'); */
 
 
@@ -36,9 +39,12 @@ router.post('/', [
 ], crearCategoria)
 
 //Actualizar registro - privado - cualquier persona con un token válido
-router.put('/:id', (req, res) => {
-    res.json('PUT - Todo ok!');
-})
+router.put('/:id', [
+    validarJWT,
+    check('nombre', 'El nombres es obligatorio').not().isEmpty(),
+    check('id').custom(existeCategoriaPorId),
+    validarCampos,
+],actualizarCategoria)
 
 //Borrar categoria - Admin - cualquier persona con un token válido
 router.delete('/:id', (req, res) => {

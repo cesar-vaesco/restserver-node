@@ -111,3 +111,12 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
     - Se crea el controlador
     - Se valida que el id de la categoria exista (db-validators)
     - Se creal altuta y se añaden los check validando un id de mongo valido y que exista la categoria validando su id
+- 54.- Actualizar Categoria
+    - Se crea el método actualizarCategoria en el controlador:
+        -  eliminado de la req.body estado y usuario para que estos datos no sean editados y los datos restndtes guardandolos en un nuevo objeto llamado data
+        - Se utiliza el método Categoria.findByIdAndUpdate para actualizar la información
+    - En el router se valida:
+        - Quien modifique la información tenga un token valido
+        - Que se envie el nombre como obligatorio
+        - que el id exista
+        - que se validen los campos
