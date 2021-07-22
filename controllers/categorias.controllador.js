@@ -75,32 +75,23 @@ const actualizarCategoria = async (req, res = response) => {
 }
 
 
-/* const usuariosPut = async (req, res = response) => {
+//Borrar(cambiar estado de la categoria) categoria
+const borrarCategoria = async (req, res = response) => {
 
     const { id } = req.params;
-    const { _id, password, google, correo, ...resto } = req.body;
 
-    //TODO: Validar contra base de datos
-    if (password) {
+    const categoriaBorrada = await Categoria.findByIdAndUpdate(id, { estado: false }, { new: true });
 
-        const salt = bcryptjs.genSaltSync();
-        resto.password = bcryptjs.hashSync(password, salt);
-    }
-
-    const usuario = await Usuario.findByIdAndUpdate(id, resto);
-
-    res.json(usuario);
-} */
-
-//Borrar(cambiar estado de la categoria) categoria
-
+    res.json(categoriaBorrada);
+}
 
 
 
 module.exports = {
 
+    actualizarCategoria,
+    borrarCategoria,
     crearCategoria,
     obtenerCategorias,
     obtenerCategoria,
-    actualizarCategoria
 }
