@@ -13,7 +13,8 @@ class Server {
         this.paths = {
             auth:        '/api/auth',
             categorias:  '/api/categorias',
-            usuarios:    '/api/usuarios',
+            productos:    '/api/productos',
+            usuarios:    '/api/usuarios'
         }
 
 
@@ -51,6 +52,7 @@ class Server {
         //Middleware que configura endpoint de nustra api -> http://localhost:8080/api/usuarios/?
         this.app.use(this.paths.usuarios, require('../routes/users.routes'));
         this.app.use(this.paths.categorias, require('../routes/categorias.routes'));
+        this.app.use(this.paths.productos, require('../routes/productos.routes'));
     }
 
 

@@ -123,3 +123,6 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 55.- Se elimina una categoria(cambia e estado e true a false)
     - Para cambiar el estado se hace uso de la función de mongoose findByIdAndUpdate en el controllador
     - En el router se valida qu quien elimine tenga un token valido, cuente con rol de admin,  qu cuente el id con un id valido de mongo, que exista el id de la categoria y que se validen los campos
+- 56.- Definiendo el path de productos en el servidor (models/server.js)
+- 57.- Creando el modelo de productos y definiendo su exportación en models/index.js
+- 58.- Se crean las rutas y los controladores de Producto
