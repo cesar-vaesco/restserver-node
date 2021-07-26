@@ -140,3 +140,5 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
     - Ayudado de expresión regular la búsqueda se genera por correo o nombre trayendo todas las coincidencias
     - Se ha validado para que sólo se muestre los usuarios activos
     - Se muestran el conteo de los resultados de las busquedas
+- 62.- Busqueda en base de datos de categorias - productos
+    - Se crean los métodos que permniten buscar categorias o produtos por su mongoID o por su nombre

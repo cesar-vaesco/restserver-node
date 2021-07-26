@@ -40,6 +40,56 @@ const buscarUsuarios = async (termino = '', res = response) => {
     });
 }
 
+const buscarCategorias = async (termino = '', res = response) => {
+
+    const esMongoID = ObjectId.isValid(termino);
+
+    if (esMongoID) {
+        const categoria = await Categoria.findById(termino);
+        return res.json({
+            results: categoria ? [categoria] : []
+        })
+    }
+
+    //Expresión regular que permite realizar la busqueda sin distinción de mayúsculas o minúsculas
+    const regex = new RegExp(termino, 'i');
+
+    const categorias = await Categoria.find({ nombre: regex, estado: true })
+        .populate('categoria', 'nombre');
+
+    const resultadoBusqueda = await Producto.countDocuments({ nombre: regex, estado: true });
+
+    res.json({
+        results: { resultadoBusqueda, categorias }
+    });
+}
+
+const buscarProductos = async (termino = '', res = response) => {
+
+    const esMongoID = ObjectId.isValid(termino);
+
+    if (esMongoID) {
+        const producto = await Producto.findById(termino)
+            .populate('categoria', 'nombre');
+
+            return res.json({
+            results: producto ? [producto] : []
+        })
+    }
+
+    //Expresión regular que permite realizar la busqueda sin distinción de mayúsculas o minúsculas
+    const regex = new RegExp(termino, 'i');
+
+    const productos = await Producto.find({ nombre: regex, estado: true }).populate('categoria', 'nombre');
+
+    const resultadoBusqueda = await Producto.countDocuments({ nombre: regex, estado: true });
+
+    res.json({
+        results: { resultadoBusqueda, productos }
+    });
+}
+
+
 
 ///api/buscar/coleccion/termino
 const buscar = (req, res = response) => {
@@ -59,8 +109,10 @@ const buscar = (req, res = response) => {
             buscarUsuarios(termino, res);
             break;
         case 'categoria':
+            buscarCategorias(termino, res);
             break;
         case 'productos':
+            buscarProductos(termino, res);
             break;
 
         default:
