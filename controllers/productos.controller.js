@@ -36,9 +36,9 @@ const obtenerProducto = async (req = request, res = response) => {
     /* console.log(req); */
 
     const producto = await Producto.findById(id)
-    if(producto.estado === false) {
+    if (producto.estado === false) {
         return res.status(404).json({
-            msg:'El producto no existe en la base de datos'
+            msg: 'El producto no existe en la base de datos'
         })
     }
 
@@ -56,9 +56,12 @@ const crearProducto = async (req, res = response) => {
 
     const { estado, usuario, ...body } = req.body;
 
-    const productoDB = await Producto.findOne({ nombre: body.nombre });
 
-    if (productoDB) {
+    const productoDB = await Producto.findOne({ nombre:body.nombre });
+
+    console.log(productoDB);
+
+    if (productoDB === true) {
         return res.status(400).json({
             msg: `El producto ${productoDB.nombre} ya existe`
         })
