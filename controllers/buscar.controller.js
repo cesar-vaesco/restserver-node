@@ -17,10 +17,27 @@ const buscarUsuarios = async (termino = '', res = response) => {
 
     if (esMongoID) {
         const usuario = await Usuario.findById(termino);
-        res.json({
+        return res.json({
             results: usuario ? [usuario] : []
         })
     }
+
+    //Expresión regular que permite realizar la busqueda sin distinción de mayúsculas o minúsculas
+    const regex = new RegExp(termino, 'i');
+
+    const usuarios = await Usuario.find({
+        $or: [{ nombre: regex }, { correo: regex }],
+        $and: [{ estado: true }]
+    });
+
+    const resultadoBusqueda = await Usuario.countDocuments({
+        $or: [{ nombre: regex }, { correo: regex }],
+        $and: [{ estado: true }]
+    });
+
+    res.json({
+        results: { resultadoBusqueda, usuarios }
+    });
 }
 
 

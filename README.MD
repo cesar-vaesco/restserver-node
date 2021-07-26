@@ -126,11 +126,17 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 56.- Definiendo el path de productos en el servidor (models/server.js)
 - 57.- Creando el modelo de productos y definiendo su exportación en models/index.js
 - 58.- Se crean las rutas y los controladores de Producto
+
+
   ### Busquedas tomando en cuenta las colecciones
   <br>
-
 - 59.- Ruta para realizar busquedas
     - Se crea el router que va a permitir realizar busquedas de un producto tomado en cuenta su categoria
     - Se crea el controlador el cual va recibir como parametros categoria y producto
     - Se configura el servidor para que tome la ruta de la busquedas
-- 60.- Busqueda en base de datos - validar que usuario sea buscado con um Id válido de mongo
+- 60.- Busqueda en base de datos - validar que usuario sea buscado con un Id válido de mongo
+- 61.- Busqueda en base de datos - validar que usuario sea buscado por correo o nombre
+    - Se usan operadores lógicos de mongo ($and - $or)
+    - Ayudado de expresión regular la búsqueda se genera por correo o nombre trayendo todas las coincidencias
+    - Se ha validado para que sólo se muestre los usuarios activos
+    - Se muestran el conteo de los resultados de las busquedas
