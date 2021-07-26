@@ -141,4 +141,22 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
     - Se ha validado para que sólo se muestre los usuarios activos
     - Se muestran el conteo de los resultados de las busquedas
 - 62.- Busqueda en base de datos de categorias - productos
-    - Se crean los métodos que permniten buscar categorias o produtos por su mongoID o por su nombre
+    - Se crean los métodos que permniten buscar categorias o productos por su mongoID o por su nombre
+
+<hr/>
+
+#### [URl de nuestra app hasta el momento en producción](https://app-rest-node-app.herokuapp.com/)  --> https://app-rest-node-app.herokuapp.com/
+
+<hr/>
+
+
+<hr/>
+
+### Ver la documentación de la api desde postman
+
+<p align="center">
+  <img src="public/img/documentacion-postman.png" width="200" height="250">
+   <img src="public/img/documentacion-publicada.png" width="250" height="250">
+</p>
+
+<hr/>
