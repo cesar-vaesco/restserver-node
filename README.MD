@@ -160,3 +160,10 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 </p>
 
 <hr/>
+
+ ### Carga de Archivos
+
+ - 63.- Ruta para realizar carga de archivos
+    - Se crea el router que va a permitir cargar un archivo
+    - Se crea el controlador
+    - Se configura el servidor para que tome la ruta de la carga de archivos

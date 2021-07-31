@@ -12,10 +12,11 @@ class Server {
 
         this.paths = {
             auth:        '/api/auth',
-            buscar: '/api/buscar',
+            buscar:      '/api/buscar',
             categorias:  '/api/categorias',
-            productos:    '/api/productos',
+            productos:   '/api/productos',
             usuarios:    '/api/usuarios',
+            uploads:     '/api/uploads',
         }
 
 
@@ -49,12 +50,13 @@ class Server {
 
     routes() {
 
-        this.app.use(this.paths.auth, require('../routes/auth.routes.js'));
-        //Middleware que configura endpoint de nustra api -> http://localhost:8080/api/usuarios/?
-        this.app.use(this.paths.buscar, require('../routes/buscar.routes'));
-        this.app.use(this.paths.usuarios, require('../routes/users.routes'));
+        //Middleware que configura endpoint de nustra api -> http://localhost:8080/api/?/?
+        this.app.use(this.paths.auth,       require('../routes/auth.routes.js'));
+        this.app.use(this.paths.buscar,     require('../routes/buscar.routes'));
+        this.app.use(this.paths.usuarios,   require('../routes/users.routes'));
         this.app.use(this.paths.categorias, require('../routes/categorias.routes'));
-        this.app.use(this.paths.productos, require('../routes/productos.routes'));
+        this.app.use(this.paths.productos,  require('../routes/productos.routes'));
+        this.app.use(this.paths.uploads,    require('../routes/uploads.routes'));
     }
 
 
