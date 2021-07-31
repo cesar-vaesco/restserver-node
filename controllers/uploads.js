@@ -1,6 +1,7 @@
 const path = require('path');
 
 const { response } = require("express");
+const { readSync } = require('fs');
 
 
 
@@ -20,11 +21,27 @@ const cargarArchivo = (req, res = response) => {
     } */
 
     //Información del archivo que se esta cargando
-    console.log('req.files >>>', req.files); // eslint-disable-line
+    /* console.log('req.files >>>', req.files); // eslint-disable-line */
 
     const { archivo } = req.files;
 
-    const uploadPath = path.join(__dirname, '../uploads/', archivo.name);
+    const nombreCortado = archivo.name.split('.');
+    console.log(nombreCortado);
+
+    const extension = nombreCortado[nombreCortado.length - 1];
+
+    //Validar la extención
+
+    const extencionesValidas = ['png', 'jpg', 'jpeg', 'gif'];
+
+    if (!extencionesValidas.includes(extension)) {
+        return res.json({ msg: `La extensión ${extension} no es permitida, extensiones validas: ${extencionesValidas}` })
+    }
+
+    res.json({ extension })
+
+
+    /* const uploadPath = path.join(__dirname, '../uploads/', archivo.name);
 
     archivo.mv(uploadPath, (err) => {
         if (err) {
@@ -33,7 +50,7 @@ const cargarArchivo = (req, res = response) => {
         }
 
         res.json({ msg: 'File uploaded to ' + uploadPath });
-    });
+    }); */
 
 }
 

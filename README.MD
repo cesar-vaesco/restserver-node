@@ -174,3 +174,8 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
         - Se valida que se este cargando un archivo archivo
         - Si existe un archivo, se le da una ruta al archivo para designar donde va a ser guardado
         - *** Se debe de asegurar la existencia de la carpeta donde se van a resguardar los archivos ***
+        - Ejemplo de configuracón: https://github.com/richardgirges/express-fileupload/blob/master/example/server.js
+- 65 .- Validar la extensión del archivo cargado
+    - Se corta el nombre del archivo creando un arreglo, esto sirve para identificar la extensión del archivo cargado
+    - Se crea un arreglo con las extensiones validas para poder comparar y aceptar que el archivo cuente con una extensión válida
+    -
