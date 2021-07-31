@@ -167,3 +167,10 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
     - Se crea el router que va a permitir cargar un archivo
     - Se crea el controlador
     - Se configura el servidor para que tome la ruta de la carga de archivos
+- 64.- Subiendo archivos
+    - Se instala la librería express-fileupload
+    - Se agrega al archivo server.js el middleware de fileupload
+    - En el archivo del controlador uploads.js:
+        - Se valida que se este cargando un archivo archivo
+        - Si existe un archivo, se le da una ruta al archivo para designar donde va a ser guardado
+        - *** Se debe de asegurar la existencia de la carpeta donde se van a resguardar los archivos ***
