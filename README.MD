@@ -190,3 +190,7 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 69 .- Carpeta destino de imagenes
     - Se cambiaron parametros para que se cree la carpeta que guarde las imagenes y que valide extenciones para guardar imagenes
     - Se maneja con try-catch la funcionalidad de guardar imagenes para mejorar el manejo de errores
+- 70.- Ruta para actualizar imagenes de Usuarios y Productos
+    - Se crea en el router la petición put con sus validaciones para actualizar la imagenes
+    - Se crea la función coleccionesPermitidas en el archivo helpers/db-validators.js para validar que en la busqueda se esta buscando una coleccion permitida, esta función es usada en el router
+    - Se crea el controlador que ayuda a identificar los parametros a recibir en la petición de la actualización de la imagen
