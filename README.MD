@@ -141,7 +141,7 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
     - Se ha validado para que sólo se muestre los usuarios activos
     - Se muestran el conteo de los resultados de las busquedas
 - 62.- Busqueda en base de datos de categorias - productos
-    - Se crean los métodos que permniten buscar categorias o productos por su mongoID o por su nombre
+    - Se crean los métodos que permiten buscar categorias o productos por su mongoID o por su nombre
 
 <hr/>
 
@@ -178,4 +178,5 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 65 .- Validar la extensión del archivo cargado
     - Se corta el nombre del archivo creando un arreglo, esto sirve para identificar la extensión del archivo cargado
     - Se crea un arreglo con las extensiones validas para poder comparar y aceptar que el archivo cuente con una extensión válida
-    -
+- 66 .- Ubicar y cambiar nombre de archivo que se envia
+    - Usando al librería UUID se le asigna un nombre a las imagenes, lo cúal permite identicar de manera única cada una de ellas
