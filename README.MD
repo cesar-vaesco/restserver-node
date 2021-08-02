@@ -180,7 +180,10 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
     - Se crea un arreglo con las extensiones validas para poder comparar y aceptar que el archivo cuente con una extensión válida
 - 66 .- Ubicar y cambiar nombre de archivo que se envia
     - Usando al librería UUID se le asigna un nombre a las imagenes, lo cúal permite identicar de manera única cada una de ellas
-- 87 .- Helper -> Subir archivo
+- 67 .- Helper -> Subir archivo
     - Se crean un index de los helpers en la carpeta helpes para hacer más practicar la importación
     - Se crea una función helper en el archivo helpers/subir-archivo.js, el cúal contiene la lógica que permite subir el archivo. Esta lógica previamente ya estaba creada dentro el archivo controllador/uploads.js, pero ahora al separa la funcionalidad, la lógica de  helpers/subir-archivo.js puede ser utilizada en otra parte de nustra aplicación.
     - En el archivo controllador/uploads.js se ha agregado la función vargar archivo de helpers/subir-archivo.js y su funcionalidad ahora tambíen se le agregado que sea un método asincrono
+- 68 .- Crear carpetas destino de los archivos creados
+    - En el archivo helpers/subir-archivo.js se creo anteriormente la función crearArchivo, el cúal recibe 3 argumentos por defecto: files, extensionesValidas = ['png', 'jpg', 'jpeg', 'gif'], carpeta = ''.
+    - Para el ejemplo actual, en el archivo controllers/uploads.js se han cambiados los parametros por defecto, aceptando sólo archivos 'md' o 'txt' y resguardandolos en una carpeta llamada textos. Para que lo anterior sea posible, se configura en el server él middleware que permite cargar archivos ( --> this.app.use(fileupload({ ) para que el argumento createParentPath: este en true
