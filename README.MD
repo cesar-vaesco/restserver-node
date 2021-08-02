@@ -194,3 +194,6 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
     - Se crea en el router la petición put con sus validaciones para actualizar la imagenes
     - Se crea la función coleccionesPermitidas en el archivo helpers/db-validators.js para validar que en la busqueda se esta buscando una coleccion permitida, esta función es usada en el router
     - Se crea el controlador que ayuda a identificar los parametros a recibir en la petición de la actualización de la imagen
+- 71.- Actualizar imagen de usuario y de producto
+    - Al modelo de producto de le agrega el atributo img que va a permitir guardar una imagen, el modelo de usuarios ya contaba con ese atributo
+    - En el archivo uploads.controller.js se agregaron los modelos Uuairio y Producto, esto con la finalidad de hacer una busqueda para identificar si existen en la base de datos. De existir, realizar la actualización de la carga de la imagen

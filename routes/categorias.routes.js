@@ -8,7 +8,7 @@ const {
     obtenerCategorias,
     obtenerCategoria,
     actualizarCategoria,
-    borrarCategoria } = require('../controllers/categorias.controllador');
+    borrarCategoria } = require('../controllers/categorias.controller');
 
 const { existeCategoriaPorId } = require('../helpers/db-validators');
 

@@ -3,7 +3,7 @@ const { check } = require('express-validator');
 
 const { validarCampos } = require('../middlewares/validar-campos');
 
-const { cargarArchivo, actualizarImagen } = require('../controllers/uploads');
+const { cargarArchivo, actualizarImagen } = require('../controllers/uploads.controller');
 const { coleccionesPermitidas } = require('../helpers/db-validators');
 
 
