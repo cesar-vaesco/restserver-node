@@ -180,3 +180,7 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
     - Se crea un arreglo con las extensiones validas para poder comparar y aceptar que el archivo cuente con una extensión válida
 - 66 .- Ubicar y cambiar nombre de archivo que se envia
     - Usando al librería UUID se le asigna un nombre a las imagenes, lo cúal permite identicar de manera única cada una de ellas
+- 87 .- Helper -> Subir archivo
+    - Se crean un index de los helpers en la carpeta helpes para hacer más practicar la importación
+    - Se crea una función helper en el archivo helpers/subir-archivo.js, el cúal contiene la lógica que permite subir el archivo. Esta lógica previamente ya estaba creada dentro el archivo controllador/uploads.js, pero ahora al separa la funcionalidad, la lógica de  helpers/subir-archivo.js puede ser utilizada en otra parte de nustra aplicación.
+    - En el archivo controllador/uploads.js se ha agregado la función vargar archivo de helpers/subir-archivo.js y su funcionalidad ahora tambíen se le agregado que sea un método asincrono
