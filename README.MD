@@ -204,3 +204,5 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
     - En las rutas del router se agrega el validador como middleware
 - 73.- Borrando archivos del servidor para evitar que existan dos o más imagenes guardadas del mismo producto o usuario
     - Se válida la existencia de la imagen y usando métodos de la lifreria fs(fileSystem), se elimina la imagen previa
+- 74.- Servicio para mostrar las imagenes guardadas
+    - Creación de ruta get para mostrar imagenes guardadas de Usuarios y Productos

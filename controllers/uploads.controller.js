@@ -84,9 +84,59 @@ const actualizarImagen = async (req, res = response) => {
     res.json(modelo);
 }
 
+const mostrarImagen = async (req, res = response) => {
+
+    const { id, coleccion } = req.params;
+
+    let modelo;
+
+    switch (coleccion) {
+        case 'usuarios':
+            modelo = await Usuario.findById(id);
+            if (!modelo) {
+                return res.status(400).json({ msg: `No existe un usuario con el id:  ${id}` })
+            }
+            break;
+
+        case 'productos':
+            modelo = await Producto.findById(id);
+            if (!modelo) {
+                return res.status(400).json({ msg: `No existe un producto con el id: ${id}` })
+            }
+            break;
+
+        default:
+            return res.status(500).json({ msg: 'Se me olvidó validar esto' })
+    }
+
+    // Limpiar imagenes previas
+    try {
+
+        if (modelo.img) {
+            // Borrar la imagen del servidor el producto
+            const pathImagen = path.join(__dirname, '../uploads', coleccion, modelo.img);
+            if (fs.existsSync(pathImagen)) {
+                return res.sendFile(pathImagen)
+            }
+        }
+
+    } catch (error) {
+
+        res.status(500).json({
+            msg: `Error al borrar ${modelo.img}`
+        })
+
+    }
+
+
+    res.json({
+        msg: 'Falta el placelholder'
+    });
+}
 
 module.exports = {
 
     cargarArchivo,
-    actualizarImagen
+    actualizarImagen,
+    mostrarImagen
 }
