@@ -196,4 +196,9 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
     - Se crea el controlador que ayuda a identificar los parametros a recibir en la petición de la actualización de la imagen
 - 71.- Actualizar imagen de usuario y de producto
     - Al modelo de producto de le agrega el atributo img que va a permitir guardar una imagen, el modelo de usuarios ya contaba con ese atributo
-    - En el archivo uploads.controller.js se agregaron los modelos Uuairio y Producto, esto con la finalidad de hacer una busqueda para identificar si existen en la base de datos. De existir, realizar la actualización de la carga de la imagen
+    - En el archivo uploads.controller.js se agregaron los modelos Usuario y Producto, esto con la finalidad de hacer una busqueda para identificar si existen en la base de datos. De existir, realizar la actualización de la carga de la imagen
+- 72.- Middleware validarArchivoSubir
+  - Se crea un mediddleware donde se valida que al subir un archivo no vaya vacio
+  - Se exporta a través del index de los middlewars
+  - Se elimina de los controladores la función que anteriormente funcgía como validador de subir un archivo
+  - En las rutas del router se agrega el validador como middleware
