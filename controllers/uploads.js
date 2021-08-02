@@ -22,9 +22,16 @@ const cargarArchivo = async (req, res = response) => {
     //Información del archivo que se esta cargando
     /* console.log('req.files >>>', req.files); // eslint-disable-line */
 
-    const nombre = await subirArchivo(req.files, ['txt','md'],'textos');
-
+try {
+    const nombre = await subirArchivo(req.files, undefined, 'img');
     res.json({ nombre });
+} catch (msg) {
+
+    res.status(400).json({msg});
+
+}
+
+
 
 }
 

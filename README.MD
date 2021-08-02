@@ -187,3 +187,6 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 - 68 .- Crear carpetas destino de los archivos creados
     - En el archivo helpers/subir-archivo.js se creo anteriormente la función crearArchivo, el cúal recibe 3 argumentos por defecto: files, extensionesValidas = ['png', 'jpg', 'jpeg', 'gif'], carpeta = ''.
     - Para el ejemplo actual, en el archivo controllers/uploads.js se han cambiados los parametros por defecto, aceptando sólo archivos 'md' o 'txt' y resguardandolos en una carpeta llamada textos. Para que lo anterior sea posible, se configura en el server él middleware que permite cargar archivos ( --> this.app.use(fileupload({ ) para que el argumento createParentPath: este en true
+- 69 .- Carpeta destino de imagenes
+    - Se cambiaron parametros para que se cree la carpeta que guarde las imagenes y que valide extenciones para guardar imagenes
+    - Se maneja con try-catch la funcionalidad de guardar imagenes para mejorar el manejo de errores
