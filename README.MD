@@ -211,6 +211,12 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
     - Se regresa la imagen con la respuesta usando el método sendFile
 
 
+ ### Carga de Archivos - Cloudinary
 
-const pathImagen = path.join(__dirname, '../assets/no-image.jpg');
-    res.sendFile(pathImagen);
+ [Cloudinary](https://cloudinary.com/ ):  ``` https://cloudinary.com/  ```
+
+ - *** Para usa Cloudinary se requiere contar con una cuenta ***
+
+- 76.- Cargando imagens a cloudinary
+    - Se carga la variable de entorno de cloudinary (CLOUDINARY_URL )a el archivo .env la cual se encuantra en el Dashboard de la cuenta de cloudinary
+    - Se crea una función llamada actualizarImagenCloudinary, la cúal contiene la lógica que va a permitir cargar las imagenes cloudinary
