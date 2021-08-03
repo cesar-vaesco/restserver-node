@@ -39,7 +39,7 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 <div id="cambiando_variables_heroku"></div>
 *** Modificando las variables de entorno configuradas en HEROKU ***
 
-- 30 .- Cambiando las variables e entorno del proyecto en local a el repo de heroku
+- 30 .- Cambiando las variables de entorno del proyecto en local a el repo de heroku
     - *** En este commit se cambió la variable de entorno MONGODB_CNN configurandola de manera productiva a heroku ***
     -
     - Crear variables de entorno:
@@ -217,6 +217,14 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
 
  - *** Para usa Cloudinary se requiere contar con una cuenta ***
 
-- 76.- Cargando imagens a cloudinary
+<div id="ambiando_variables_cloudinary"></div>
+*** Modificando las variables de entorno configuradas en HEROKU ***
+
+- 76.- Cargando imagenes a cloudinary
     - Se carga la variable de entorno de cloudinary (CLOUDINARY_URL )a el archivo .env la cual se encuantra en el Dashboard de la cuenta de cloudinary
     - Se crea una función llamada actualizarImagenCloudinary, la cúal contiene la lógica que va a permitir cargar las imagenes cloudinary
+- 77.- Borrar imagenes en cloudinary
+    - Se extrae el id con el que cloudinary guarda las imagenes para poder implementar la lógica que va a permitir borrar una imagen en caso de que el perfil ya cuente con alguna
+- 78.- Estableciendo ```CLOUDINARY_URL``` como variable de entorno en HEROKU ---> * [verpaso30](#cambiando_variables_heroku) para identificar los pasos a seguir
+    - Ejemplo:  heroku config:set CLOUDINARY_URL="cloudinary://URL" ---> * [verpaso76](#cambiando_variables_cloudinary) para identificar los pasos a seguir
+    - Esto va a permitir poder usar el servicio de cloudinary y usar nustra app desde heroku de manera productiva

@@ -30,4 +30,8 @@ router.get('/:coleccion/:id', [
     validarCampos
 ], mostrarImagen)
 
+
+
+
+
 module.exports = router;
