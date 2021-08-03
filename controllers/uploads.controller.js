@@ -128,10 +128,13 @@ const mostrarImagen = async (req, res = response) => {
 
     }
 
+    const pathImagen = path.join(__dirname, '../assets/no-image.jpg');
+    res.sendFile(pathImagen);
 
-    res.json({
-        msg: 'Falta el placelholder'
-    });
+    /* res.json({
+        msg: 'Falta el placelholder',
+
+    }); */
 }
 
 module.exports = {

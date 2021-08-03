@@ -206,3 +206,11 @@ Ejecutar el comando ```npm install``` para reconstruir los modulos de node
     - Se válida la existencia de la imagen y usando métodos de la lifreria fs(fileSystem), se elimina la imagen previa
 - 74.- Servicio para mostrar las imagenes guardadas
     - Creación de ruta get para mostrar imagenes guardadas de Usuarios y Productos
+- 75.- mostrar imagen de relleno
+    - Se crea la ruta/path de la imagen que se va a cargar en caso de que el perfil del usuario y del producto no cuenten con una imagen prevía
+    - Se regresa la imagen con la respuesta usando el método sendFile
+
+
+
+const pathImagen = path.join(__dirname, '../assets/no-image.jpg');
+    res.sendFile(pathImagen);
